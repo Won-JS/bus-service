@@ -1,0 +1,20 @@
+{
+  "name": "bus-service",
+  "install": "npm ci",
+  "terminals": [
+    {
+      "name": "api",
+      "command": "npm run dev:server",
+      "description": "bus-service Express API (TypeScript, tsx watch) on http://localhost:4000"
+    },
+    {
+      "name": "web",
+      "command": "npm run dev:web",
+      "description": "React + Vite web app on http://localhost:5173 (proxies /api to the API)"
+    }
+  ],
+  "ports": [
+    { "name": "api", "port": 4000 },
+    { "name": "web", "port": 5173 }
+  ]
+}
